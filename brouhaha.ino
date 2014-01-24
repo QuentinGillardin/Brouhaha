@@ -74,18 +74,17 @@ void loop(){
   }
   if(niveau == 1 ){
     allumerNiveau1();
- 
-    }  
+  }  
   
   //allumer première couronne
-    if(niveau == 2){
-      allumerNiveau2();
-    }
+  if(niveau == 2){
+    allumerNiveau2();
+  }
   
   //allumer seconde couronne
-    if(niveau == 3){
-      allumerNiveau3();          
-      }
+  if(niveau == 3){
+    allumerNiveau3();          
+  }
   
 }
 
@@ -93,7 +92,7 @@ void loop(){
   
 
 
-
+//Lecture et gestion des informations venant du dispositif du porjet décibel (cf readme)
 int recupererValeur(){
   char buffer[5];
   if(Serial.read()==':'){
@@ -115,148 +114,149 @@ int detectionNiveau(){
   }
 }
 
+//Gestion des états de la matrice de LED
 void allumerNiveau1(){
-        digitalWrite(rpin1, HIGH);
-        digitalWrite(rpin2, HIGH);
-        digitalWrite(rpin3, HIGH);
-        digitalWrite(rpin4, HIGH);
-        digitalWrite(rpin5, HIGH);
-        digitalWrite(rpin6, HIGH);
-        digitalWrite(gpin1, LOW);
-        digitalWrite(gpin2, LOW);
-        digitalWrite(gpin2, LOW);
-        digitalWrite(gpin3, LOW);
-        digitalWrite(gpin4, LOW);
-        digitalWrite(gpin5, LOW);
-        digitalWrite(gpin6, LOW);
-        digitalWrite(bpin1, HIGH);
-        digitalWrite(bpin2, HIGH);
-        digitalWrite(bpin3, HIGH);
-        digitalWrite(bpin4, HIGH);
-        digitalWrite(bpin5, HIGH);
-        digitalWrite(bpin6, HIGH);
-        
-        digitalWrite(v1, LOW);
-        digitalWrite(v2, LOW);
-        digitalWrite(v3, LOW);
-        digitalWrite(v4, LOW);
-        digitalWrite(v5, LOW);
-        digitalWrite(v6, HIGH); 
+  digitalWrite(rpin1, HIGH);
+  digitalWrite(rpin2, HIGH);
+  digitalWrite(rpin3, HIGH);
+  digitalWrite(rpin4, HIGH);
+  digitalWrite(rpin5, HIGH);
+  digitalWrite(rpin6, HIGH);
+  digitalWrite(gpin1, LOW);
+  digitalWrite(gpin2, LOW);
+  digitalWrite(gpin2, LOW);
+  digitalWrite(gpin3, LOW);
+  digitalWrite(gpin4, LOW);
+  digitalWrite(gpin5, LOW);
+  digitalWrite(gpin6, LOW);
+  digitalWrite(bpin1, HIGH);
+  digitalWrite(bpin2, HIGH);
+  digitalWrite(bpin3, HIGH);
+  digitalWrite(bpin4, HIGH);
+  digitalWrite(bpin5, HIGH);
+  digitalWrite(bpin6, HIGH);
+  
+  digitalWrite(v1, LOW);
+  digitalWrite(v2, LOW);
+  digitalWrite(v3, LOW);
+  digitalWrite(v4, LOW);
+  digitalWrite(v5, LOW);
+  digitalWrite(v6, HIGH); 
 }
 
 void allumerNiveau2(){
-          digitalWrite(rpin1, HIGH);
-          digitalWrite(rpin2, HIGH);
-          digitalWrite(rpin3, HIGH);
-          digitalWrite(rpin4, HIGH);
-          digitalWrite(rpin5, HIGH);
-          digitalWrite(rpin6, HIGH);
-          digitalWrite(gpin1, HIGH);
-          digitalWrite(gpin2, HIGH);
-          digitalWrite(gpin2, HIGH);
-          digitalWrite(gpin3, HIGH);
-          digitalWrite(gpin4, HIGH);
-          digitalWrite(gpin5, HIGH);
-          digitalWrite(gpin6, HIGH);
-          digitalWrite(bpin1, LOW);
-          digitalWrite(bpin2, LOW);
-          digitalWrite(bpin3, LOW);
-          digitalWrite(bpin4, LOW);
-          digitalWrite(bpin5, LOW);
-          digitalWrite(bpin6, LOW);
-          
-          digitalWrite(v1, LOW);
-          digitalWrite(v2, LOW);
-          digitalWrite(v3, LOW);
-          digitalWrite(v4, HIGH);
-          digitalWrite(v5, HIGH);
-          digitalWrite(v6, HIGH);
+  digitalWrite(rpin1, HIGH);
+  digitalWrite(rpin2, HIGH);
+  digitalWrite(rpin3, HIGH);
+  digitalWrite(rpin4, HIGH);
+  digitalWrite(rpin5, HIGH);
+  digitalWrite(rpin6, HIGH);
+  digitalWrite(gpin1, HIGH);
+  digitalWrite(gpin2, HIGH);
+  digitalWrite(gpin2, HIGH);
+  digitalWrite(gpin3, HIGH);
+  digitalWrite(gpin4, HIGH);
+  digitalWrite(gpin5, HIGH);
+  digitalWrite(gpin6, HIGH);
+  digitalWrite(bpin1, LOW);
+  digitalWrite(bpin2, LOW);
+  digitalWrite(bpin3, LOW);
+  digitalWrite(bpin4, LOW);
+  digitalWrite(bpin5, LOW);
+  digitalWrite(bpin6, LOW);
+  
+  digitalWrite(v1, LOW);
+  digitalWrite(v2, LOW);
+  digitalWrite(v3, LOW);
+  digitalWrite(v4, HIGH);
+  digitalWrite(v5, HIGH);
+  digitalWrite(v6, HIGH);
 }
 
 void allumerNiveau3(){
-           digitalWrite(rpin1, LOW);
-          digitalWrite(rpin2, LOW);
-          digitalWrite(rpin3, LOW);
-          digitalWrite(rpin4, LOW);
-          digitalWrite(rpin5, LOW);
-          digitalWrite(rpin6, LOW);
-          digitalWrite(gpin1, HIGH);
-          digitalWrite(gpin2, HIGH);
-          digitalWrite(gpin2, HIGH);
-          digitalWrite(gpin3, HIGH);
-          digitalWrite(gpin4, HIGH);
-          digitalWrite(gpin5, HIGH);
-          digitalWrite(gpin6, HIGH);
-          digitalWrite(bpin1, HIGH);
-          digitalWrite(bpin2, HIGH);
-          digitalWrite(bpin3, HIGH);
-          digitalWrite(bpin4, HIGH);
-          digitalWrite(bpin5, HIGH);
-          digitalWrite(bpin6, HIGH);
-  
-          digitalWrite(v1, HIGH);
-          digitalWrite(v2, HIGH);
-          digitalWrite(v3, HIGH);
-          digitalWrite(v4, HIGH);
-          digitalWrite(v5, HIGH);
-          digitalWrite(v6, HIGH);
+  digitalWrite(rpin1, LOW);
+  digitalWrite(rpin2, LOW);
+  digitalWrite(rpin3, LOW);
+  digitalWrite(rpin4, LOW);
+  digitalWrite(rpin5, LOW);
+  digitalWrite(rpin6, LOW);
+  digitalWrite(gpin1, HIGH);
+  digitalWrite(gpin2, HIGH);
+  digitalWrite(gpin2, HIGH);
+  digitalWrite(gpin3, HIGH);
+  digitalWrite(gpin4, HIGH);
+  digitalWrite(gpin5, HIGH);
+  digitalWrite(gpin6, HIGH);
+  digitalWrite(bpin1, HIGH);
+  digitalWrite(bpin2, HIGH);
+  digitalWrite(bpin3, HIGH);
+  digitalWrite(bpin4, HIGH);
+  digitalWrite(bpin5, HIGH);
+  digitalWrite(bpin6, HIGH);
+
+  digitalWrite(v1, HIGH);
+  digitalWrite(v2, HIGH);
+  digitalWrite(v3, HIGH);
+  digitalWrite(v4, HIGH);
+  digitalWrite(v5, HIGH);
+  digitalWrite(v6, HIGH);
 }
 
 void allumerCouronne1(){
-          digitalWrite(rpin1, HIGH);
-          digitalWrite(rpin2, HIGH);
-          digitalWrite(rpin3, HIGH);
-          digitalWrite(rpin4, LOW);
-          digitalWrite(rpin5, LOW);
-          digitalWrite(rpin6, HIGH);
-          digitalWrite(gpin1, HIGH);
-          digitalWrite(gpin2, HIGH);
-          digitalWrite(gpin3, HIGH);
-          digitalWrite(gpin4, LOW);
-          digitalWrite(gpin5, LOW);
-          digitalWrite(gpin6, HIGH);
-          digitalWrite(bpin1, HIGH);
-          digitalWrite(bpin2, HIGH);
-          digitalWrite(bpin3, HIGH);
-          digitalWrite(bpin4, LOW);
-          digitalWrite(bpin5, LOW);
-          digitalWrite(bpin6, HIGH);
-  
-          digitalWrite(v1, HIGH);
-          digitalWrite(v2, HIGH);
-          digitalWrite(v3, HIGH);
-          digitalWrite(v4, HIGH);
-          digitalWrite(v5, HIGH);
-          digitalWrite(v6, HIGH);
+  digitalWrite(rpin1, HIGH);
+  digitalWrite(rpin2, HIGH);
+  digitalWrite(rpin3, HIGH);
+  digitalWrite(rpin4, LOW);
+  digitalWrite(rpin5, LOW);
+  digitalWrite(rpin6, HIGH);
+  digitalWrite(gpin1, HIGH);
+  digitalWrite(gpin2, HIGH);
+  digitalWrite(gpin3, HIGH);
+  digitalWrite(gpin4, LOW);
+  digitalWrite(gpin5, LOW);
+  digitalWrite(gpin6, HIGH);
+  digitalWrite(bpin1, HIGH);
+  digitalWrite(bpin2, HIGH);
+  digitalWrite(bpin3, HIGH);
+  digitalWrite(bpin4, LOW);
+  digitalWrite(bpin5, LOW);
+  digitalWrite(bpin6, HIGH);
+
+  digitalWrite(v1, HIGH);
+  digitalWrite(v2, HIGH);
+  digitalWrite(v3, HIGH);
+  digitalWrite(v4, HIGH);
+  digitalWrite(v5, HIGH);
+  digitalWrite(v6, HIGH);
 }
 
 void allumerCouronne2(){
-          digitalWrite(rpin1, LOW);
-          digitalWrite(rpin2, LOW);
-          digitalWrite(rpin3, LOW);
-          digitalWrite(rpin4, HIGH);
-          digitalWrite(rpin5, HIGH);
-          digitalWrite(rpin6, HIGH);
-          digitalWrite(gpin1, LOW);
-          digitalWrite(gpin2, LOW);
-          digitalWrite(gpin2, LOW);
-          digitalWrite(gpin3, HIGH);
-          digitalWrite(gpin4, HIGH);
-          digitalWrite(gpin5, HIGH);
-          digitalWrite(gpin6, HIGH);
-          digitalWrite(bpin1, LOW);
-          digitalWrite(bpin2, LOW);
-          digitalWrite(bpin3, LOW);
-          digitalWrite(bpin4, HIGH);
-          digitalWrite(bpin5, HIGH);
-          digitalWrite(bpin6, HIGH);
-  
-          digitalWrite(v1, HIGH);
-          digitalWrite(v2, HIGH);
-          digitalWrite(v3, HIGH);
-          digitalWrite(v4, HIGH);
-          digitalWrite(v5, HIGH);
-          digitalWrite(v6, HIGH);
+  digitalWrite(rpin1, LOW);
+  digitalWrite(rpin2, LOW);
+  digitalWrite(rpin3, LOW);
+  digitalWrite(rpin4, HIGH);
+  digitalWrite(rpin5, HIGH);
+  digitalWrite(rpin6, HIGH);
+  digitalWrite(gpin1, LOW);
+  digitalWrite(gpin2, LOW);
+  digitalWrite(gpin2, LOW);
+  digitalWrite(gpin3, HIGH);
+  digitalWrite(gpin4, HIGH);
+  digitalWrite(gpin5, HIGH);
+  digitalWrite(gpin6, HIGH);
+  digitalWrite(bpin1, LOW);
+  digitalWrite(bpin2, LOW);
+  digitalWrite(bpin3, LOW);
+  digitalWrite(bpin4, HIGH);
+  digitalWrite(bpin5, HIGH);
+  digitalWrite(bpin6, HIGH);
+
+  digitalWrite(v1, HIGH);
+  digitalWrite(v2, HIGH);
+  digitalWrite(v3, HIGH);
+  digitalWrite(v4, HIGH);
+  digitalWrite(v5, HIGH);
+  digitalWrite(v6, HIGH);
 }
   
   
