@@ -1,3 +1,9 @@
+/*Version V1
+/*24 janvier 2014
+/*Auteur & Co-Auteur
+/*Quentin Gillardin & César Théard
+
+
 const int rpin1 = 10;
 const int gpin1 = 11;
 const int bpin1 = 12;
