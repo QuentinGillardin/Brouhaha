@@ -92,7 +92,7 @@ void loop(){
   
 
 
-//Lecture et gestion des informations venant du dispositif du porjet décibel (cf readme)
+//Lecture et gestion des informations venant du dispositif du projet décibel (cf readme)
 int recupererValeur(){
   char buffer[5];
   if(Serial.read()==':'){
